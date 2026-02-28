@@ -1,7 +1,12 @@
 self.__BUILD_MANIFEST = {
   "__rewrites": {
     "afterFiles": [],
-    "beforeFiles": [],
+    "beforeFiles": [
+      {
+        "source": "/real-estate-nextjs-prototype//_next/:path+",
+        "destination": "/real-estate-nextjs-prototype/_next/:path+"
+      }
+    ],
     "fallback": []
   },
   "sortedPages": [
