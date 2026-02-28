@@ -1,26 +1,55 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8f5f0;
+  --foreground: #1a1a1a;
+  --gold: #c9a96e;
+  --gold-600: #b8925b;
+  --gold-700: #a77f47;
+  --charcoal: #1a1a1a;
+  --muted: #efe8dc;
+  --muted-2: #e3d6c1;
+  --offwhite: #faf7f2;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--gold);
+  --color-primary-600: var(--gold-600);
+  --color-primary-700: var(--gold-700);
+  --color-charcoal: var(--charcoal);
+  --color-offwhite: var(--offwhite);
+  --color-muted: var(--muted);
+  --color-muted-2: var(--muted-2);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html, body {
+  height: 100%;
+}
+
+h1, h2, h3, h4, .heading {
+  font-family: var(--font-serif), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-feature-settings: "liga", "kern";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utility layers */
+@layer utilities {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 1200px;
+  }
 }
